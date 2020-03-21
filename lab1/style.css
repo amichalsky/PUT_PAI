@@ -1,0 +1,18 @@
+li{ list-style-type: square}
+.cena {color:red; font-weight:bold}
+.wstęp {font-style: italic}
+img {border-style: solid; border-color: blue}
+img:hover {border-color: red}
+h1+h2 {letter-spacing:5px}
+[colspan="2"]{font-size: small}
+p+p {color:gray};
+
+
+
+*   { font-family: Tahoma}
+body{
+    margin: 5em10em5em10em;
+    background-image: url("https://pngimage.net/wp-content/uploads/2018/06/png-small.png");background-repeat: repeat-y
+    }
+p   { text-align: justify}
+h1  { color: blue}
