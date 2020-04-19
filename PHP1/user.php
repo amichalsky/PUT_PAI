@@ -29,7 +29,7 @@
                 $uploadPath = $currentDir.$uploadDirectory.$fileName;
                 
                 if(move_uploaded_file($fileTmpName, $uploadPath)) {
-                    echo "Poprawnie załadowano zdjęcie";
+                    echo "<img src='zdjeciaUzytkownikow\photo123.JPG' alt='picture'>";
                 }
             }
 
