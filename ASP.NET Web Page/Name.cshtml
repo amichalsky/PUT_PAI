@@ -1,0 +1,24 @@
+﻿@{ 
+    Layout = null;
+    string name = "Robert  Paulson";
+
+    if (!string.IsNullOrEmpty(Request["name"]))
+    {
+        name = Request["name"];
+    }
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ASP.NET</title>
+</head>
+<body>
+    <ul>
+        @for (int i = 0; i < 10; i++)
+        {
+            <li>His name is @name</li>
+        }
+    </ul>
+</body>
+</html>

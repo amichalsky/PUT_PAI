@@ -1,0 +1,41 @@
+﻿@{ 
+    if (Session["rules"] == null)
+    {
+        Session["rules"] = new List<string>();
+    }
+
+    if (!string.IsNullOrEmpty(Request["rule"]))
+    {
+        ((List<string>)Session["rules"]).Add(Request["rule"]);
+        Response.Redirect("Rules.cshtml");
+    }
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+    <div>
+        <form method="post">
+            <label for="rule">Rule </label>
+            <input type="text" id="rule" name="rule" /><br /><br />
+            <input type="submit" value="submit" />
+        </form>
+    </div>
+
+    <br />
+    <br />
+    <b>Fight Club Rules</b>
+    <br />
+    <br />
+    <ol>
+        @foreach (var rule in (List<string>)Session["rules"])
+        {
+            <li>@rule</li>
+        }
+    </ol>
+
+</body>
+</html>
