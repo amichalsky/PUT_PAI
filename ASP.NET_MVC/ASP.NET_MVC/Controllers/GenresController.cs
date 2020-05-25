@@ -17,6 +17,7 @@ namespace ASP.NET_MVC.Controllers
         // GET: Genres
         public ActionResult Index()
         {
+            if (Request.IsAjaxRequest()) return PartialView("_GenreList", db.Genres.ToList());
             return View(db.Genres.ToList());
         }
 
